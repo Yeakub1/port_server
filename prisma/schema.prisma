@@ -45,3 +45,16 @@ model Project {
 
   @@map("projects")
 }
+
+// Blog Model
+model Blog {
+  id         String   @id @default(uuid())
+  title      String
+  category   String
+  coverPhoto String
+  content    String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("blogs")
+}
